@@ -1,4 +1,10 @@
+basePath: /api/v1
+host: localhost:8080
 info:
-  contact: {}
+  contact:
+    name: github.com/MH0R
+  description: CRUD using Gin, Swagger, GoORM and SQLite
+  title: Gopportunities
+  version: "1.0"
 paths: {}
 swagger: "2.0"

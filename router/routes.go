@@ -4,16 +4,21 @@ import (
 	docs "github.com/MH0R/Gopportunities/docs"
 	"github.com/MH0R/Gopportunities/router/handler"
 	"github.com/gin-gonic/gin"
-	swaggerfiles "github.com/swaggo/files"
+	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func initializeRouter(router *gin.Engine) {
+
 	// Initilizing handler
 
 	handler.InitializeHandler()
 	basePath := "/api/v1"
 	docs.SwaggerInfo.BasePath = basePath
+
+	// Initilize Swagger
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
 	// Routes
 	v1 := router.Group(basePath)
 	{
@@ -29,6 +34,4 @@ func initializeRouter(router *gin.Engine) {
 
 	}
 
-	// Initilize Swagger
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 }
