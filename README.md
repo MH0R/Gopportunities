@@ -55,27 +55,6 @@ make run
 ```
 
 
-This project includes a `Dockerfile` and `docker-compose.yml` file for easy containerization and deployment. Here are the most common Docker and Docker Compose commands you may want to use:
-
-- `docker build -t your-image-name .`: Build a Docker image for the project. Replace `your-image-name` with a name for your image.
-- `docker run -p 8080:8080 -e PORT=8080 your-image-name`: Run a container based on the built image. Replace `your-image-name` with the name you used when building the image. You can change the port number if necessary.
-
-If you want to use Docker Compose, follow these commands:
-
-- `docker compose build`: Build the services defined in the `docker-compose.yml` file.
-- `docker compose up`: Run the services defined in the `docker-compose.yml` file.
-
-To stop and remove containers, networks, and volumes defined in the `docker-compose.yml` file, run:
-
-```sh
-docker-compose down
-```
-
-For more information on Docker and Docker Compose, refer to the official documentation:
-
-- [Docker](https://docs.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-
 ## Used Tools
 
 This project uses the following tools:
